@@ -1,0 +1,54 @@
+#!/usr/bin/env ruby
+# this really needs to be rewritten
+
+require 'set'
+
+delete = ARGV.delete('--delete')
+playlist = ARGV.first
+
+raise 'supply an m3u playlist' unless playlist && playlist =~ /\.m3u8?$/
+
+# include trailing slash
+local_path = File.expand_path('~/tmp/')
+remote_path = '/storage/sdcard0/Music/'
+
+remote_files = Set.new
+
+File.open(playlist, 'r').each do |line|
+  next if line =~ /^#/ # skip lines that start with #
+
+  # strip preceding ../
+  # this does still include the directories!
+  # "Burial/Untrue/02. Archangel.flac"
+  file_path = line.gsub(/^\.\.\//, '').strip
+  file_path = file_path.gsub(/\.(.{3,4})/, '.mp3')
+
+  local_file = File.join(local_path, file_path)
+  remote_file = File.join(remote_path, file_path)
+
+  remote_files << remote_file
+
+  if `adb shell ls "#{remote_file}"` =~ /No such file/
+    puts "Syncing #{file_path}"
+
+    `adb shell mkdir -p "#{File.dirname(remote_file)}"`
+    `adb push "#{local_file}" "#{remote_file}"`
+  else
+    puts "Skipping #{file_path}"
+  end
+end
+
+if delete
+  files = `adb shell find #{remote_path} -type f`
+  files = files.split("\n").map(&:strip)
+
+  files.each do |remote_file|
+    next if remote_files.include?(remote_file)
+
+    puts "Deleting #{remote_file.gsub(remote_path, '')}"
+    `adb shell rm "#{remote_file}"`
+  end
+
+  # delete empty directories
+  `adb shell find "#{remote_path}" -depth -type d -empty -exec rmdir {}\;`
+end

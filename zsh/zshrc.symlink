@@ -1,0 +1,38 @@
+# shortcut to this dotfiles path is $DOTFILES
+[[ -z "$DOTFILES" ]] && export DOTFILES=$HOME/.dotfiles
+
+# this should probably be less hardcodey
+if [[ $(uname) == "Linux" ]]; then
+  export CODE_ROOT=$HOME/Projects/Code
+elif [[ $(uname) == "Darwin" ]]; then
+  export CODE_ROOT=$HOME/Code
+fi
+
+# source every .zsh file in this repo
+for config_file in $DOTFILES/**/*.zsh; do
+  # things that need to be loaded last are manually blacklisted
+  # TODO: improve
+  [[ "$(basename $config_file)" = "completion.zsh" ]] ||\
+  [[ $config_file =~ 'syntax-highlighting' ]] ||\
+  [[ $config_file =~ 'history-substring-search' ]] ||\
+  [[ $config_file =~ '.vim/tmp/undo' ]] ||\
+    source $config_file
+done
+
+# use .localrc for SUPER SECRET CRAP that you don't
+# want in your public, versioned repo.
+[[ -a ~/.localrc ]] && source ~/.localrc
+
+# initialize autocomplete here, otherwise functions won't be loaded
+autoload -U compinit
+compinit
+
+# load every completion after autocomplete loads
+for config_file in $DOTFILES/**/completion.zsh
+do
+  source $config_file
+done
+
+# load syntax highlighting - this must be last!
+source $DOTFILES/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $DOTFILES/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh

@@ -1,0 +1,16 @@
+[user]
+  name = devlin zed
+  email = me@devlinzed.com
+
+[color]
+  ui = auto
+
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
+
+[format]
+  pretty = "%C(yellow)%h%Creset %s %Cgreen%cr%Creset by %an%C(bold)%d%Creset"
+
+[pull]
+  rebase = true

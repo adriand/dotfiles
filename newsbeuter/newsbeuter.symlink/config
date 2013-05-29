@@ -1,0 +1,3 @@
+auto-reload yes
+browser firefox-trunk
+reload-time 30

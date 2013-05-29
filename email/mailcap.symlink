@@ -1,0 +1,13 @@
+application/gzip; xarchiver '%s'; nametemplate=%s.gz; test=test "$DISPLAY" != ""
+application/pdf; /usr/bin/epdfview '%s'; nametemplate=%s.pdf; test=test "$DISPLAY" != ""
+application/x-bzip; xarchiver '%s'; nametemplate=%s.bz; test=test "$DISPLAY" != ""
+application/x-gzip; xarchiver '%s'; nametemplate=%s.gz; test=test "$DISPLAY" != ""
+application/x-rar; xarchiver '%s'; nametemplate=%s.rar; test=test "$DISPLAY" != ""
+application/x-tar; xarchiver '%s'; nametemplate=%s.tar; test=test "$DISPLAY" != ""
+application/x-tgz; xarchiver '%s'; nametemplate=%s.tgz; test=test "$DISPLAY" != ""
+application/x-zip; xarchiver '%s'; nametemplate=%s.zip; test=test "$DISPLAY" != ""
+application/zip; xarchiver '%s'; nametemplate=%s.zip; test=test "$DISPLAY" != ""
+audio/*; /usr/bin/vlc '%s'; test=test -n "$DISPLAY" 
+image/*; /usr/bin/gpicview '%s'; test=test -n "$DISPLAY"
+text/html; lynx -dump '%s' -display_charset "`locale charmap`" -assume_charset %{charset}; nametemplate=%s.html; copiousoutput;
+video/*; /usr/bin/vlc '%s'; test=test -n "$DISPLAY"

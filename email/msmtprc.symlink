@@ -1,0 +1,14 @@
+defaults
+logfile ~/.local/log/msmtp.log
+tls on
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+
+account nilved
+auth on
+from me@devlinzed.com
+host smtp.lavabit.com
+passwordeval pass show main/lavabit | head -n 1
+port 587
+user nilvedxyz@lavabit.com
+
+account default : nilved

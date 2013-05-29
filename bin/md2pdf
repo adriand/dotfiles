@@ -1,0 +1,38 @@
+#!/usr/bin/env ruby
+require 'pdfkit'
+require 'redcarpet'
+require 'tempfile'
+
+def render(markdown)
+  @engine ||= Redcarpet::Markdown.new(Redcarpet::Render::HTML.new, {
+    autolink: true,
+    fenced_code_blocks: true,
+    no_intra_emphasis: true,
+    space_after_headers: true,
+    strikethrough: true,
+    superscript: true
+  })
+
+  @engine.render(markdown)
+end
+
+def save_pdf(html)
+  tempfile = File.open("/tmp/md2pdf-#{(rand * 1000).floor}", 'w')
+
+  kit = PDFKit.new(html, :page_size => 'Letter')
+  kit.to_file(tempfile.path)
+
+  tempfile
+end
+
+def main
+  markdown = $stdin.read
+  html = render(markdown)
+  pdf_file = save_pdf(html)
+
+  puts pdf_file.path
+end
+
+if __FILE__ == $PROGRAM_NAME
+  main
+end

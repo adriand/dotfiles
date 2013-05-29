@@ -1,0 +1,19 @@
+IMAPAccount lavabit
+Host imap.lavabit.com
+User nilvedxyz@lavabit.com
+UseIMAPS yes
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore lavabit-remote
+Account lavabit
+
+MaildirStore lavabit-local
+Path ~/.mail/me-devlinzed.com/
+Inbox ~/.mail/me-devlinzed.com/Inbox
+
+Channel lavabit
+Master :lavabit-remote:
+Slave :lavabit-local:
+Patterns *
+Create Both
+SyncState *

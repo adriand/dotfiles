@@ -1,0 +1,2 @@
+#!/bin/sh
+cat ~/.ssh/${1:-id_rsa}.pub

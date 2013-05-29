@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+# USAGE: watch-maildor "~/.mail/me-devlinzed.com/Inbox/new"
+require 'listen'
+require 'mail'
+require 'shellwords'
+
+module NotifyMaildir
+  def self.run!
+    maildir = File.expand_path(ARGV.shift)
+
+    Listen.to(maildir) do |modified, added, removed|
+      node = added.shift
+      node && send_notification(node)
+    end
+  end
+
+  def self.send_notification(node)
+    mail = Mail.read(node)
+
+    title = mail.subject.shellescape
+    body = mail.from.first.shellescape
+
+    puts "Notifying about #{title}..."
+
+    Kernel.system('notmuch new')
+    Kernel.system(%Q[notify-send #{title} "#{body}"])
+  end
+
+  run! if $PROGRAM_NAME == __FILE__
+end

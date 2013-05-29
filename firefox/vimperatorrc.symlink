@@ -1,0 +1,24 @@
+let mapleader = ","
+
+set defsearch="duckduckgo"
+set editor="sensible-editor"
+
+map l <C-tab>
+map h <C-S-tab>
+
+map <leader>G :tabopen !gh 
+map <leader>I :tabopen !i 
+map <leader>L :tabopen ! 
+map <leader>R :tabopen !r 
+map <leader>W :tabopen !w 
+map <leader>Y :tabopen !yt 
+
+map <leader>g :open !gh 
+map <leader>i :open !i 
+map <leader>l :open ! 
+map <leader>r :open !r 
+map <leader>w :open !w 
+map <leader>y :open !yt 
+
+map J <C-d>
+map K <C-u>

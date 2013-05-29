@@ -1,0 +1,10 @@
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+
+execute pathogen#infect()
+
+source $DOTFILES/vim/config.vim
+source $DOTFILES/vim/bindings.vim
+source $DOTFILES/vim/plugin_config.vim
+source $DOTFILES/vim/commands.vim
+source $DOTFILES/vim/functions.vim
+source $DOTFILES/vim/autocmd.vim
