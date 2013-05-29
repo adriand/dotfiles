@@ -41,7 +41,6 @@ set smartindent
 set softtabstop=2
 set suffixesadd=.rb
 set tabstop=4
-set tags+=.hg/tags;/
 set textwidth=79
 set timeoutlen=200
 set undodir=~/.vim/tmp/undo//
