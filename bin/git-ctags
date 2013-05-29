@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+trap "rm -f .git/tags.$$" EXIT
+git ls-files | ctags --tag-relative -L - -f .git/tags.$$
+mv .git/tags.$$ .git/tags

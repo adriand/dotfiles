@@ -12,5 +12,8 @@
 [format]
   pretty = "%C(yellow)%h%Creset %s %Cgreen%cr%Creset by %an%C(bold)%d%Creset"
 
+[init]
+  templatedir = ~/.dotfiles/git/template
+
 [pull]
   rebase = true

@@ -1,0 +1,2 @@
+#!/bin/sh
+[[ "$1" == "rebase" ]] && exec .git/hooks/post-merge
