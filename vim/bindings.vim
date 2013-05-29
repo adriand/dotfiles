@@ -73,15 +73,13 @@ map Y y$
 " quick sort
 map <silent> <leader>s :sort<CR>
 
-" quick splitjoin
-nmap <silent> <leader>sp :SplitjoinSplit<CR>
-nmap <silent> <leader>sj :SplitjoinJoin<CR>
-
-" reset ctrlp's cache
-map <silent> <leader>ma :!hg addremove<CR>:CtrlPClearCache<CR>
-
-" use magic regexps by default
-nnoremap / /\v
-nnoremap ? ?\v
-nmap <leader>g :g/\v
-nmap <leader>s :s/\v
+" fugitive bindings
+nmap <leader>gA :CtrlPClearCache<CR>Git add .<CR>
+nmap <leader>gC :Git amend -a<CR>
+nmap <leader>ga :CtrlPClearCache<CR>:Git add %<CR>
+nmap <leader>gb :Gblame<CR>
+nmap <leader>gc :Gcommit<CR>
+nmap <leader>gd :Gdiff<CR>
+nmap <leader>gp :Git push<CR>
+nmap <leader>gs :Gstatus<CR>
+nmap <silent> <leader>gt :Git ctags<CR>
