@@ -7,7 +7,7 @@ function git_prompt_info() {
 parse_git_dirty () {
   gitstat=$(git status 2>/dev/null | grep '\(# Untracked\|# Changes\|# Changed but not updated:\)')
 
-  if [[ $(echo ${gitstat} | grep -c "^# Changes to be committed:$") > 0 ]]; then
+  if [[ $(echo ${gitstat} | grep -c "^\(# Changes to be committed:\|# Changes not staged for commit:\)$") > 0 ]]; then
 	echo -n "$ZSH_THEME_GIT_PROMPT_DIRTY"
   fi
 

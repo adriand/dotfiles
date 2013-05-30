@@ -15,7 +15,7 @@ for config_file in $DOTFILES/**/*.zsh; do
   [[ "$(basename $config_file)" = "completion.zsh" ]] ||\
   [[ $config_file =~ 'syntax-highlighting' ]] ||\
   [[ $config_file =~ 'history-substring-search' ]] ||\
-  [[ $config_file =~ '.vim/tmp/undo' ]] ||\
+  [[ $config_file =~ 'tmp/undo' ]] ||\
     source $config_file
 done
 
