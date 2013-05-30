@@ -5,4 +5,5 @@ newsbeuter/newsbeuter.symlink/cache.db
 newsbeuter/newsbeuter.symlink/cache.db.lock
 newsbeuter/newsbeuter.symlink/history.cmdline
 newsbeuter/newsbeuter.symlink/history.search
+vim/vim.symlink/.netrwhist
 vim/vim.symlink/tmp

@@ -1,5 +1,4 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
-
 execute pathogen#infect()
 
 source $DOTFILES/vim/config.vim
