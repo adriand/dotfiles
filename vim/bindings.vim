@@ -61,6 +61,7 @@ nnoremap <leader>f <C-]>
 
 " quickly open ag.vim
 nmap <leader>a :Ag 
+nmap <leader>A :execute "Ag \"" . expand("<cword>") . "\" $PWD"<CR>
 
 " move back and forth through previous and next buffers
 nmap <silent> <leader>x :bn<CR>
