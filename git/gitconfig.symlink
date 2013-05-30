@@ -20,3 +20,7 @@
 
 [push]
   default = simple
+
+[alias]
+  amend = commit --amend --reuse-message HEAD
+  peek = log --since='yesterday'
