@@ -36,6 +36,3 @@ endif
 
 " resize splits when vim is resized
 autocmd VimResized * wincmd =
-
-" save when we lose focus
-au FocusLost * :silent! wall

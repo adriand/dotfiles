@@ -5,7 +5,7 @@ list() {
 }
 
 build() {
-  echo > "$HOME/.projects" # empty out the file beforehand
+  echo "$DOTFILES" | tee "$HOME/.projects"
 
   find ~ -type d -name '.git' | while read repository; do
     dirname "$repository" | grep -v "/\." | tee -a "$HOME/.projects"
