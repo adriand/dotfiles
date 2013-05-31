@@ -19,8 +19,14 @@
   rebase = true
 
 [push]
-  default = simple
+  default = current
 
 [alias]
   amend = commit --amend --reuse-message HEAD
+  forget = reset HEAD
   peek = log --since='yesterday'
+  remotes = remote -v
+  revision = rev-parse HEAD
+  sync = !git add . && git add -u
+  tags = tag -l
+  undo = reset --hard HEAD
