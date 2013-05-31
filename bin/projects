@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+new() {
+  git init "$1"
+  list --build &>/dev/null &
+}
+
+list() {
+  if [[ "$1" == "--build" ]]; then
+    find ~ -type d -name '.git' |
+      xargs -n 1 dirname |
+      grep -v "/\." |
+      tee "$HOME/.projects"
+  else
+    cat "$HOME/.projects"
+  fi
+}
+
+guess() {
+  projects=$(list | xargs -n 1 basename)
+  match=$(echo "$projects" | matcher "$1" --limit 1)
+
+  list | grep "$match$"
+}
+
+help() {
+  echo "projects new/guess/ls"
+}
+
+command="$1"; shift
+case "$command" in
+  "new") new $* ;;
+  "ls") list $* ;;
+  "guess") guess $* ;;
+  *) help ;;
+esac

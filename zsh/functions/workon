@@ -1,15 +1,2 @@
 #!/usr/bin/env bash
-
-if command -v matcher &> /dev/null; then
-  if [[ -z "$CODE_ROOT" ]]; then
-    echo "Error: please set CODE_ROOT." >&2
-  else
-    projects=$(echo $CODE_ROOT/* | tr ' ' "\n" | sed "s#^$CODE_ROOT/##g")
-    match=$(echo "$projects" | matcher $1 --limit 1)
-
-    cd $CODE_ROOT/$match
-  fi
-else
-  echo "You don't have matcher installed." >&2
-  echo "Get it here: https://github.com/burke/matcher" >&2
-fi
+cd $(projects guess "$1")
