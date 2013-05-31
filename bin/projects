@@ -1,19 +1,14 @@
 #!/usr/bin/env bash
 
-new() {
-  git init "$1"
-  list --build &>/dev/null &
+list() {
+  cat "$HOME/.projects"
 }
 
-list() {
-  if [[ "$1" == "--build" ]]; then
-    find ~ -type d -name '.git' |
-      xargs -n 1 dirname |
-      grep -v "/\." |
-      tee "$HOME/.projects"
-  else
-    cat "$HOME/.projects"
-  fi
+build() {
+  find ~ -type d -name '.git' |
+    xargs -n 1 dirname |
+    grep -v "/\." |
+    tee "$HOME/.projects"
 }
 
 guess() {
@@ -23,9 +18,19 @@ guess() {
   list | grep "$match$"
 }
 
+new() {
+  git init "$1" > /dev/null
+
+  echo "$PWD/$1"
+
+  build &>/dev/null & # rebuild the list
+}
+
 command="$1"; shift
 case "$command" in
-  "new") new $* ;;
+  "") list $* ;;
+  "build") build $* ;;
   "guess") guess $* ;;
-  *) list $* ;;
+  "new") new $* ;;
+  *) echo "wtf are you doing" 1>&2 ;;
 esac

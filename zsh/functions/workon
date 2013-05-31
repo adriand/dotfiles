@@ -1,2 +1,7 @@
 #!/usr/bin/env bash
-cd $(projects guess "$1")
+if [[ "$1" == "-n" ]] && [[ -n "$2" ]]; then
+  cd "$CODE_ROOT"
+  cd $(projects new "$2")
+else
+  cd $(projects guess "$1")
+fi
