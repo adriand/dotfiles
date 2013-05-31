@@ -23,14 +23,9 @@ guess() {
   list | grep "$match$"
 }
 
-help() {
-  echo "projects new/guess/ls"
-}
-
 command="$1"; shift
 case "$command" in
   "new") new $* ;;
-  "ls") list $* ;;
   "guess") guess $* ;;
-  *) help ;;
+  *) list $* ;;
 esac
