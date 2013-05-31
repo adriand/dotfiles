@@ -5,10 +5,11 @@ list() {
 }
 
 build() {
-  find ~ -type d -name '.git' |
-    xargs -n 1 dirname |
-    grep -v "/\." |
-    tee "$HOME/.projects"
+  echo > "$HOME/.projects" # empty out the file beforehand
+
+  find ~ -type d -name '.git' | while read repository; do
+    dirname "$repository" | grep -v "/\." | tee -a "$HOME/.projects"
+  done
 }
 
 guess() {
