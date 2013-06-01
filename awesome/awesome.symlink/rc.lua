@@ -46,8 +46,6 @@ editor_cmd = terminal .. " -e " .. editor
 
 browser = "luakit"
 
-file_manager = "pcmanfm"
-
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
 -- If you do not like this or do not have such a key,
@@ -258,8 +256,6 @@ globalkeys = awful.util.table.join(
   awful.key({ modkey }, "w", function() awful.util.spawn(browser) end),
 
   awful.key({ modkey }, "a", function() awful.util.spawn('pass-autotype') end),
-
-  awful.key({ modkey }, "f", function() awful.util.spawn(file_manager) end),
 
   awful.key({ modkey }, "Return", function() awful.util.spawn(terminal) end),
 
