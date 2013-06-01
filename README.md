@@ -35,7 +35,7 @@ what i use
 * **shell**: [zsh](http://zsh.org/)
 * **terminal emulator**: [xterm](https://en.wikipedia.org/wiki/Xterm)
 * **text editor**: [vim](http://vim.org)
-* **web browser**: [mozilla firefox](http://mozilla.org/en-US/firefox/new/)
+* **web browser**: [luakit](https://github.com/mason-larobina/luakit)
 * **window manager**: [awesome](http://awesome.naquadah.org/)
 
 ### recommended & required tools

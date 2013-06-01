@@ -44,7 +44,7 @@ terminal = "xterm -fa 'DejaVu Sans Mono' -fs 9"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 
-browser = "firefox-trunk"
+browser = "luakit"
 
 file_manager = "pcmanfm"
 
