@@ -52,6 +52,9 @@ add_binds("all", {
     key({}, "Escape", "Return to `normal` mode.",
         function (w) w:set_mode() end),
 
+    key({}, "✓", "Return to `normal` mode.",
+        function (w) w:set_mode() end),
+
     key({"Control"}, "[", "Return to `normal` mode.",
         function (w) w:set_mode() end),
 
@@ -144,7 +147,7 @@ add_binds("normal", {
             return false
         end),
 
-    key({}, "i", "Enter `insert` mode.",
+    key({}, "✓", "Enter `insert` mode.",
         function (w) w:set_mode("insert")  end),
 
     key({}, ":", "Enter `command` mode.",
@@ -408,13 +411,10 @@ add_binds("normal", {
         function (w) w:restart() end),
 
     -- Window
-    buf("^ZZ$", "Quit and save the session.",
+    buf("^Q$", "Quit and save the session.",
         function (w) w:save_session() w:close_win() end),
 
     buf("^ZQ$", "Quit and don't save the session.",
-        function (w) w:close_win() end),
-
-    buf("^D$",  "Quit and don't save the session.",
         function (w) w:close_win() end),
 
     -- Enter passthrough mode

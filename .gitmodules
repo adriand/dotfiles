@@ -64,3 +64,6 @@
 [submodule "vim/vim.symlink/bundle/vim-powerline"]
 	path = vim/vim.symlink/bundle/vim-powerline
 	url = git@github.com:Lokaltog/vim-powerline.git
+[submodule "luakit/config.symlink/plugins/adblock"]
+	path = luakit/config.symlink/plugins/adblock
+	url = git@github.com:Plaque-fcc/luakit-adblock.git

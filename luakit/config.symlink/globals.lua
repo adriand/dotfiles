@@ -1,8 +1,8 @@
 -- Global variables for luakit
 globals = {
-    homepage            = "http://luakit.org/",
+    homepage            = "http://duckduckgo.com",
  -- homepage            = "http://github.com/mason-larobina/luakit",
-    scroll_step         = 40,
+    scroll_step         = 100,
     zoom_step           = 0.1,
     max_cmd_history     = 100,
     max_srch_history    = 100,
@@ -43,7 +43,7 @@ soup.ssl_strict = false
 
 -- Set cookie acceptance policy
 cookie_policy = { always = 0, never = 1, no_third_party = 2 }
-soup.accept_policy = cookie_policy.always
+soup.accept_policy = cookie_policy.no_third_party
 
 -- List of search engines. Each item must contain a single %s which is
 -- replaced by URI encoded search terms. All other occurances of the percent
@@ -53,13 +53,12 @@ soup.accept_policy = cookie_policy.always
 search_engines = {
     duckduckgo  = "https://duckduckgo.com/?q=%s",
     github      = "https://github.com/search?q=%s",
-    google      = "https://google.com/search?q=%s",
-    imdb        = "http://www.imdb.com/find?s=all&q=%s",
     wikipedia   = "https://en.wikipedia.org/wiki/Special:Search?search=%s",
+    youtube     = "https://youtube.com/results?search_query=%s",
 }
 
 -- Set google as fallback search engine
-search_engines.default = search_engines.google
+search_engines.default = search_engines.duckduckgo
 -- Use this instead to disable auto-searching
 --search_engines.default = "%s"
 

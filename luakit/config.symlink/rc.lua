@@ -131,6 +131,10 @@ require "history_chrome"
 
 require "introspector"
 
+-- Ad block
+require "plugins/adblock/adblock"
+require "plugins/adblock/adblock_chrome"
+
 -- Add command completion
 require "completion"
 

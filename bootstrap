@@ -72,6 +72,10 @@ set -e
     done
   fi
 
+# update adblock
+
+  $PWD/luakit/config.symlink/plugins/adblock/adblock-update.sh
+
 # compile YouCompleteMe, if it was installed
 
   if [[ -f "$HOME/.vim/bundle/YouCompleteMe/install.sh" ]]; then
