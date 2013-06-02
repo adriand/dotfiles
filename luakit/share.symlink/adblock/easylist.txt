@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
-! Checksum: Te5vcLzLx75zNwr03cxlAA
+! Checksum: ZFJOwOD3hsUFCo6CFbeqMg
 ! Title: EasyList
-! Last modified: 01 Jun 2013 18:11 UTC
+! Last modified: 02 Jun 2013 13:41 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.adblockplus.org/
 ! Licence: https://easylist-downloads.adblockplus.org/COPYING
@@ -681,6 +681,7 @@
 /ad2push.
 /ad3.
 /ad300.
+/ad300s.
 /ad300ws.
 /ad300x145.
 /ad300x250.
@@ -698,6 +699,7 @@
 /ad7.
 /ad728-
 /ad728.
+/ad728s.
 /ad728t.
 /ad728w.
 /ad728ws.
@@ -4715,6 +4717,7 @@ _ad_leaderboard.
 _ad_middle_
 _ad_minileaderboard.
 _ad_new_
+_ad_number=
 _ad_one.
 _ad_over_
 _ad_page_
@@ -6114,6 +6117,7 @@ _popunder+$popup
 ###ad-300x60-1
 ###ad-350
 ###ad-376x280
+###ad-4
 ###ad-4-300x90
 ###ad-635x40-1
 ###ad-655
@@ -10693,6 +10697,9 @@ standard.co.uk###esDating
 ###title-wide-sponsored-by
 ###tmcomp_ad
 ###tmglBannerAd
+###tmn_ad_1
+###tmn_ad_2
+###tmn_ad_3
 ###tmp2_promo_ad
 ###tnt_ad_column
 ###toaster_ad
@@ -16092,6 +16099,7 @@ standard.co.uk###esDating
 ##.rot_ads
 ##.rotating-ad
 ##.rotatingAdvertisement
+##.rotator_ad_overlay
 ##.round_box_advert
 ##.roundedCornersAd
 ##.roundingrayboxads
@@ -17325,6 +17333,7 @@ remixshare.com#@##adsense_block
 jeeppatriot.com#@##adsense_inline
 autoweek.com,cooperhewitt.org,core77.com,metblogs.com,oreilly.com,thisisthehive.net#@##adspace
 e24.se#@##adspace_top
+smh.com.au#@##adspot-300x250-pos-1
 mautofied.com#@##adtext
 4sysops.com,autogidas.lt,globalsecurity.org#@##adtop
 al.com,cleveland.com,gulflive.com,lehighvalleylive.com,masslive.com,mlive.com,nj.com,nola.com,oregonlive.com,pennlive.com,silive.com,syracuse.com#@##adv-masthead
@@ -19894,6 +19903,7 @@ allkpop.com#@#div[id^="div-gpt-ad-"]
 ||xdev.info^$third-party
 ||xgraph.net^$third-party
 ||xmlconfig.ltassrv.com^$third-party
+||xtendadvert.com^$third-party
 ||xtendmedia.com^$third-party
 ||xx00.info^$third-party
 ||xxlink.net^$third-party
@@ -21858,6 +21868,7 @@ allkpop.com#@#div[id^="div-gpt-ad-"]
 ||topmedia.com/external/
 ||topspin.net/secure/media/$image,domain=youtube.com
 ||toptenreviews.com/r/c/
+||toptenreviews.com/w/af_widget.js$third-party
 ||torguard.net/images/aff/
 ||torrentfreebie.com/index.asp?pid=$third-party
 ||tosol.co.uk/international.php?$third-party
@@ -24834,7 +24845,6 @@ allkpop.com#@#div[id^="div-gpt-ad-"]
 ||thinkingwithportals.com/images/*-skyscraper.
 ||thinkingwithportals.com^*-skyscraper.swf
 ||thirdage.com^*_banner.php
-||tiads.time.com^
 ||ticketnetwork.com/images/affiliates/
 ||tigerdroppings.com^*&adcode=
 ||timeinc.net/*/i/oba-compliance.png
@@ -25328,7 +25338,6 @@ allkpop.com#@#div[id^="div-gpt-ad-"]
 ||jokertraffic.com^$popup,domain=4fuckr.com
 ||leaderdownload.com^$popup,domain=fiberupload.net
 ||limbohost.net^$popup,domain=tusfiles.net
-||linkbucks.com^$popup,domain=allanalpass.com|any.gs|dyo.gs|hnmovies.com|linkbucks.com|megaline.co|qqc.co|tinylinks.co|ultrafiles.net|uploadcore.com|youfap.me|yyv.co|zff.co
 ||military.com/data/popup/new_education_popunder.htm$popup
 ||multiupload.nl/popunder/$popup
 ||nesk.co^$popup,domain=veehd.com
@@ -26728,6 +26737,7 @@ bbc.co.uk###bbccom_leaderboard
 bbc.co.uk###bbccom_leaderboard_container
 bbc.co.uk###bbccom_sponsor_section
 bbc.co.uk###bbccom_storyprintsponsorship
+bbc.co.uk##.bbccom-advert
 bbc.co.uk##.bbccom_companion
 bbc.co.uk##.bbccom_display_none
 bbc.co.uk##.bbccom_sponsor
@@ -27088,6 +27098,7 @@ broadcastingworld.net##.midsection
 broadcastnewsroom.com###shopperartbox
 broadcastnewsroom.com##.bfua
 broadcastnewsroom.com##.bottombanner
+broadway.com##.badge
 broadway.com##.home-leaderboard-728-90
 brobible.com##.takeover
 bromsgroveadvertiser.co.uk##.mpu
@@ -27121,6 +27132,7 @@ btn.com##.footer-widgets
 btobonline.com##td[width="300"]
 btscene.eu##.ddl_det_anon
 btscene.eu##.ddl_srch
+btsportshd.com##div[id^="floatLayer"]
 btvguide.com###ad2
 btvguide.com###ad3
 bubblebox.com###banner_box
@@ -27920,6 +27932,7 @@ creatives.livejasmin.com##body
 creditboards.com##img[width="728"][height="90"]
 creditinfocenter.com###masthead
 creweguardian.co.uk##.mpu
+cricfree.eu##div[id^="floatLayer"]
 cricfree.tv##div[id^="floatLayer"]
 cricinfo.com##.div300Pad
 cricket.yahoo.com###video-branding
@@ -30309,6 +30322,7 @@ iguide.to##.banner
 ihavenet.com##.ihn-ad-1
 ihavenet.com##.ihn-ad-2
 ihavenet.com##.ihn-ad-3
+ihdsports.com##div[id^="floatLayer"]
 iii.co.uk###marketdatabox_content_footer
 ikascore.com###listed
 ikascore.com###smalisted
@@ -32707,7 +32721,9 @@ newsnet5.com##.marketplace
 newsnet5.com,wcpo.com##.vertical-svg
 newsniche.com##a[style="font-size:12px; color:#ffa617"]
 newsobserver.com###dealSaverWidget
+newsobserver.com##.ad
 newsobserver.com##.focus_box
+newsobserver.com##.leaderboard
 newsok.com###leftRailContent
 newsok.com##.ad
 newsok.com##.toolbar_sponsor
@@ -34771,7 +34787,7 @@ smashingmagazine.com##.spnsrlistwrapper
 smbc-comics.com##td[style^="background-image: url(http://zs1.smbc-comics.com/images/adbar.gif);"]
 sme.sk###paidLinks
 smh.com.au###adSpotholder-EGN
-smh.com.au##.ad
+smh.com.au###adspot-300x600\,300x250-pos-1
 smh.com.au##.articleExtras-wrap
 smh.com.au##.cS-compare
 smh.com.au##.cS-debtBusters
@@ -39864,6 +39880,7 @@ zuzandra.com##.jx-bar
 @@||washingtonpost.com/wp-srv/ad/wp_ad.js
 @@||washingtonpost.com/wp-srv/ad/wp_config.js
 @@||washingtonpost.com/wp-srv/ad/wpni_generic_ad.js
+@@||washingtonpost.com^*=/ad/audsci.js
 @@||we7.com/api/streaming/advert-info?$object-subrequest
 @@||wearetennis.com/pages/home/img/ad-$image
 @@||weather.com/common/a2/oasadframe.html?position=pagespon
