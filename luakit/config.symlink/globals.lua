@@ -4,8 +4,8 @@ globals = {
  -- homepage            = "http://github.com/mason-larobina/luakit",
     scroll_step         = 100,
     zoom_step           = 0.1,
-    max_cmd_history     = 100,
-    max_srch_history    = 100,
+    max_cmd_history     = 8192,
+    max_srch_history    = 8192,
  -- http_proxy          = "http://example.com:3128",
     default_window_size = "800x600",
 
@@ -52,9 +52,6 @@ soup.accept_policy = cookie_policy.no_third_party
 -- See: http://www.lua.org/manual/5.1/manual.html#pdf-string.format
 search_engines = {
     duckduckgo  = "https://duckduckgo.com/?q=%s",
-    github      = "https://github.com/search?q=%s",
-    wikipedia   = "https://en.wikipedia.org/wiki/Special:Search?search=%s",
-    youtube     = "https://youtube.com/results?search_query=%s",
 }
 
 -- Set google as fallback search engine
