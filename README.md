@@ -72,6 +72,8 @@ folder structure
 - **bin/**: anything in `bin/` will get added to your `$PATH` and be made
   available everywhere
 
+- **functions/**: these are lazy loaded as ZSH functions
+
 - **topic/\*.zsh**: any files ending in `.zsh` get loaded into your environment
 
 - **topic/\*.symlink**: any files ending in `*.symlink` get symlinked into your

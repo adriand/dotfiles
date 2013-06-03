@@ -1,6 +1,6 @@
-fpath=($DOTFILES/zsh/functions $fpath)
+fpath=($DOTFILES/functions $fpath)
 
-autoload -U $DOTFILES/zsh/functions/*(:t)
+autoload -U $DOTFILES/functions/*(:t)
 
 export CLICOLOR=true
 export EDITOR="vim"
