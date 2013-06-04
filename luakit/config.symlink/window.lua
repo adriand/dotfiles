@@ -611,7 +611,7 @@ window.methods = {
         local tab = {hist = view.history,}
         -- And relative location
         local index = w.tabs:indexof(view)
-        if index ~= 1 then tab.after = w.tabs[index-1] end
+        if index and index ~= 1 then tab.after = w.tabs[index-1] end
         table.insert(w.closed_tabs, tab)
         view:destroy()
         w:update_tab_count()
