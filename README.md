@@ -57,8 +57,6 @@ noted.
 * [notmuch](http://notmuchmail.org/) for indexing and searching email
 * [the silver searcher](https://github.com/ggreer/the_silver_searcher) for
   replacing grep
-* [vimperator](http://vimperator.org) for keyboard-centric navigation in
-  firefox
 * [wkhtmltopdf](http://code.google.com/p/wkhtmltopdf/) for rendering markdown
   for printing
 
