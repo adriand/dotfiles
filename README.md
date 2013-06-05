@@ -10,12 +10,17 @@ cd ~/.dotfiles
 ./bootstrap
 ```
 
-this will check out the git submodules; symlink the appropriate files in
-`.dotfiles` to your home directory; install the required system-wide ruby gems;
-and install the vim plugins.  sudo may be required if your `gem` needs it.
+this will:
+
+1. check out the git submodules (vim, zsh, luakit plugins)
+2. create symlinks (see "folder structure" below)
+3. install the required system-wide ruby gems
+4. install the proper font for powerline
+5. update luakit's adblock subscriptions
+6. compile any vim plugins (&c) as necessary
 
 the bootstrap script is idempotent and you can run it again to update symlinks
-and vim plugins.
+and vim plugins.  you may need to run it as root.
 
 if you check out to somewhere other than `~/.dotfiles`, you'll need to edit
 some files that hard-code that path in because they can't accept environment
@@ -30,7 +35,7 @@ what i use
 * **feed reader**: [newsbeuter](http://newsbeuter.org/)
 * **font**: [dejavu sans mono for powerline](https://github.com/Lokaltog/powerline-fonts)
 * **music player**: [ncmpcpp](http://ncmpcpp.rybczak.net/)
-* **operating system**: [xubuntu](http://xubuntu.org/)
+* **operating system**: [ubuntu](http://xubuntu.org/)
 * **password manager**: [pass](http://zx2c4.com/projects/password-store/)
 * **shell**: [zsh](http://zsh.org/)
 * **terminal emulator**: [xterm](https://en.wikipedia.org/wiki/Xterm)
@@ -60,9 +65,6 @@ noted.
 * [wkhtmltopdf](http://code.google.com/p/wkhtmltopdf/) for rendering markdown
   for printing
 
-### vim plugins
-
-see `vim/vim.symlink/config/vundle.vim`
 
 folder structure
 ----------------
