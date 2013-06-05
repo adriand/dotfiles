@@ -67,3 +67,6 @@
 [submodule "luakit/config.symlink/plugins/adblock"]
 	path = luakit/config.symlink/plugins/adblock
 	url = git@github.com:Plaque-fcc/luakit-adblock.git
+[submodule "vim/vim.symlink/bundle/vim-gnupg"]
+	path = vim/vim.symlink/bundle/vim-gnupg
+	url = git@github.com:jamessan/vim-gnupg.git
