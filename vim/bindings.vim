@@ -36,9 +36,9 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" leader navigates between tabs
-map <leader>h :tabprevious<CR>
-map <leader>l :tabnext<CR>
+" shift navigates between tabs
+nmap H :tabprevious<CR>
+nmap L :tabnext<CR>
 
 " scale splits with the arrow keys
 map <Down> <C-w>-
@@ -76,7 +76,7 @@ map <silent> <leader>s :sort<CR>
 
 " fugitive bindings
 nmap <silent> <leader>gA :CtrlPClearCache<CR>:Git add .<CR>
-nmap <silent> <leader>gC :Git amend -a<CR>
+nmap <silent> <leader>gC :Git amend<CR>
 nmap <silent> <leader>ga :CtrlPClearCache<CR>:Git add %<CR>
 nmap <silent> <leader>gb :Gblame<CR>
 nmap <silent> <leader>gc :Gcommit<CR>
@@ -84,7 +84,3 @@ nmap <silent> <leader>gd :Gdiff<CR>
 nmap <silent> <leader>gp :Git push<CR>
 nmap <silent> <leader>gs :Gstatus<CR>
 nmap <silent> <leader>gt :Git ctags<CR>
-
-" let's try this out
-map H ^
-map L $
