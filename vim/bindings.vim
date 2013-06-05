@@ -84,3 +84,7 @@ nmap <silent> <leader>gd :Gdiff<CR>
 nmap <silent> <leader>gp :Git push<CR>
 nmap <silent> <leader>gs :Gstatus<CR>
 nmap <silent> <leader>gt :Git ctags<CR>
+
+" let's try this out
+map H ^
+map L $
