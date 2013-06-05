@@ -35,12 +35,12 @@ what i use
 * **feed reader**: [newsbeuter](http://newsbeuter.org/)
 * **font**: [dejavu sans mono for powerline](https://github.com/Lokaltog/powerline-fonts)
 * **music player**: [ncmpcpp](http://ncmpcpp.rybczak.net/)
-* **operating system**: [ubuntu](http://xubuntu.org/)
+* **operating system**: [ubuntu](http://ubuntu.com)
 * **password manager**: [pass](http://zx2c4.com/projects/password-store/)
 * **shell**: [zsh](http://zsh.org/)
 * **terminal emulator**: [xterm](https://en.wikipedia.org/wiki/Xterm)
 * **text editor**: [vim](http://vim.org)
-* **web browser**: [luakit](https://github.com/mason-larobina/luakit)
+* **web browser**: [luakit](http://luakit.org)
 * **window manager**: [awesome](http://awesome.naquadah.org/)
 
 ### recommended & required tools
