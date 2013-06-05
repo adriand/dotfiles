@@ -24,7 +24,7 @@ and vim plugins.  you may need to run it as root.
 
 if you check out to somewhere other than `~/.dotfiles`, you'll need to edit
 some files that hard-code that path in because they can't accept environment
-variables.  try `ag dotfiles`.
+variables.  try `git grep dotfiles | grep -v '^README\.md'`.
 
 what i use
 ----------
