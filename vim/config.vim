@@ -39,7 +39,7 @@ set shortmess=filtIoOA
 set showmatch
 set smartindent
 set softtabstop=2
-set suffixesadd=.rb
+set suffixesadd=.rb,.js
 set tabstop=4
 set textwidth=79
 set timeoutlen=200
