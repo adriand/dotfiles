@@ -14,16 +14,19 @@ autocmd FileType ruby let g:rubycomplete_rails = 1
 
 " other type-specific junk
 autocmd BufRead /tmp/mutt-* set syntax=markdown
-autocmd BufRead /tmp/mutt-* set textwidth=72
 
 autocmd FileType markdown nmap <leader>1 yypVr=
 autocmd FileType markdown nmap <leader>2 yypVr-
 autocmd FileType markdown nmap <leader>3 I### <ESC>
-autocmd FileType markdown nmap <leader>gq {gq}
-autocmd FileType markdown nmap <leader>ss :setlocal spell!<CR>
+autocmd FileType markdown set spell
 
-autocmd FileType python set softtabstop=4
 autocmd FileType python set shiftwidth=4
+autocmd FileType python set softtabstop=4
+
+autocmd FileType ruby,haml,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,haml,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,haml,eruby let g:rubycomplete_rails = 1
+autocmd FileType ruby,haml,eruby set omnifunc=rubycomplete#Complete
 
 " ruby/rails specific things
 if filereadable("Gemfile")
