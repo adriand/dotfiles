@@ -19,5 +19,9 @@ let g:syntastic_ruby_checkers = ["mri"]
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_global_ycm_extra_conf = $DOTFILES . "/vim/ycm_extra_conf.py"
 
+" ultisnips
+let g:UltiSnipsExpandTrigger="<leader><leader>"
+let g:UltiSnipsJumpForwardTrigger="<leader><leader>"
+
 " startify
 let g:startify_bookmarks = [ $HOME . "/.vimrc" ]
