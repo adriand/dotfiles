@@ -75,9 +75,9 @@ map Y y$
 map <silent> <leader>s :sort<CR>
 
 " fugitive bindings
-nmap <silent> <leader>gA :CtrlPClearCache<CR>:Git add .<CR>
+nmap <silent> <leader>gA :Git add .<CR>
 nmap <silent> <leader>gC :Git amend<CR>
-nmap <silent> <leader>ga :CtrlPClearCache<CR>:Git add %<CR>
+nmap <silent> <leader>ga :Git add %<CR>
 nmap <silent> <leader>gb :Gblame<CR>
 nmap <silent> <leader>gc :Gcommit<CR>
 nmap <silent> <leader>gd :Gdiff<CR>
