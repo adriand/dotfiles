@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd "$HOME/.local/share/luakit/adblock"
+cd "$DOTFILES/luakit/share.symlink/adblock"
 
 curl https://easylist-downloads.adblockplus.org/easylist.txt > easylist.txt
 curl https://easylist-downloads.adblockplus.org/easyprivacy.txt > easyprivacy.txt
