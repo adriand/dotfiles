@@ -8,10 +8,6 @@ autocmd FileType javascript nmap <leader>r :call RunWith("node")<CR>
 " superficial runners on <leader>R
 autocmd BufRead *_spec.rb nmap <leader>R :call RunWith("rspec")<CR>
 
-" omnicompletion
-autocmd FileType ruby let g:rubycomplete_classes_in_global =1
-autocmd FileType ruby let g:rubycomplete_rails = 1
-
 " other type-specific junk
 autocmd BufRead /tmp/mutt-* set syntax=markdown
 
