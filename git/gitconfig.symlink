@@ -10,7 +10,7 @@
   excludesfile = ~/.gitignore
 
 [format]
-  pretty = "%C(yellow)%h%Creset %s %Cgreen%cr%Creset by %an%C(bold)%d%Creset"
+  pretty = "%C(blue)%h%Creset %s %C(black)%cr by %an"
 
 [init]
   templatedir = ~/.dotfiles/git/template
