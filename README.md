@@ -17,7 +17,7 @@ this will:
 3. install the required system-wide ruby gems
 4. install the proper font for powerline
 5. update luakit's adblock subscriptions
-6. compile any vim plugins (&c) as necessary
+6. compile anything we set up beforehand
 
 the bootstrap script is idempotent and you can run it again to update symlinks
 and vim plugins.  you may need to run it as root.
@@ -28,6 +28,10 @@ variables.  try `git grep dotfiles | grep -v '^README\.md'`.
 
 what i use
 ----------
+
+this is a very opinionated repository and it configures and utilizes the
+following programs.  these should be installed before you run the bootstrap
+script.
 
 * **color scheme**: [base16](https://github.com/chriskempson/base16)
 * **display manager**: [slim](http://slim.berlios.de/)
@@ -45,13 +49,12 @@ what i use
 
 ### recommended & required tools
 
-these are _not_ installed by the bootstrap script!  you'll need to install them
-yourself, preferably before running it.  the default location is fine unless
-noted.
+it's recommended that these secondary tools be installed beforehand as well.
 
 * [beets](http://beets.radbox.org) for managing my music library
 * [exuberant ctags](http://ctags.sourceforge.net/) for indexing my code
 * [git](http://git-scm.org) for version control
+* [hub](https://github.com/defunkt/hub) for extending git
 * [isync](http://isync.sourceforge.net/) for receiving email
 * [keychain](http://www.funtoo.org/wiki/Keychain) for managing your ssh and gpg
   agents & passphrases
