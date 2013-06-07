@@ -22,3 +22,6 @@ done
 if command -v hub &> /dev/null; then
   eval "$(hub alias -s)"
 fi
+
+alias "fucking"="sudo"
+alias "please"="sudo"
