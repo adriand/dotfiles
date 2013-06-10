@@ -20,9 +20,16 @@ guess() {
 }
 
 new() {
-  git init "$1" > /dev/null
+  cd "$CODE_ROOT"
 
-  echo "$PWD/$1"
+  if echo "$1" | grep "\.git$" &> /dev/null; then
+    git clone "$1" > /dev/null
+  else
+    git init "$1" > /dev/null
+  fi
+
+  echo -n "$CODE_ROOT/"
+  ls -t | head -n 1
 
   build &>/dev/null & # rebuild the list
 }
