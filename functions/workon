@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 if [[ "$1" == "-n" ]] && [[ -n "$2" ]]; then
   cd $(projects new "$2")
-else
+elif [[ -n "$1" ]]; then
   cd $(projects guess "$1")
+else
+  cd $(projects | head -n 1)
 fi
