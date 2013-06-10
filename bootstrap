@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -e
+DOTFILES="$PWD"
 
 # check out git submodules
 
@@ -74,7 +75,7 @@ set -e
 
 # update adblock
 
-  $PWD/bin/update-adblock
+  $DOTFILES/bin/update-adblock
 
 # compile YouCompleteMe, if it was installed
 
