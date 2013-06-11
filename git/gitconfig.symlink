@@ -1,26 +1,3 @@
-[user]
-  name = devlin zed
-  email = me@devlinzed.com
-
-[color]
-  ui = auto
-
-[core]
-  editor = vim
-  excludesfile = ~/.gitignore
-
-[format]
-  pretty = "%C(blue)%h%Creset %s %C(black)%cr by %an"
-
-[init]
-  templatedir = ~/.dotfiles/git/template
-
-[pull]
-  rebase = true
-
-[push]
-  default = current
-
 [alias]
   amend = commit --amend --reuse-message HEAD
   assume = update-index --assume-untracked
@@ -34,3 +11,29 @@
   tags = tag -l
   unassume = update-index --no-assume-untracked
   undo = reset --hard HEAD
+
+[color]
+  ui = auto
+
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
+
+[diff]
+  algorithm = histogram
+
+[format]
+  pretty = "%C(blue)%h%Creset %s %C(black)%cr by %an"
+
+[init]
+  templatedir = ~/.dotfiles/git/template
+
+[pull]
+  rebase = true
+
+[push]
+  default = current
+
+[user]
+  email = me@devlinzed.com
+  name = devlin zed
