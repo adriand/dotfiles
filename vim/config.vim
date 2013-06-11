@@ -10,10 +10,12 @@ set background=dark
 set backspace=2
 set complete=.,w,b,u,t
 set completeopt=longest,menuone,preview
+set copyindent
 set cpo+=J
 set expandtab
 set formatoptions+=l
 set formatoptions+=n
+set hidden
 set history=1024
 set ignorecase
 set incsearch
@@ -25,7 +27,6 @@ set modelines=0
 set nobackup
 set nolazyredraw
 set nolist
-set nosmarttab
 set nostartofline
 set noswapfile
 set nowritebackup
@@ -34,10 +35,12 @@ set omnifunc=syntaxcomplete#Complete
 set pumheight=5
 set report=0
 set ruler
+set shiftround
 set shiftwidth=2
 set shortmess=filtIoOA
 set showmatch
 set smartindent
+set smarttab
 set softtabstop=2
 set suffixesadd=.rb,.js
 set tabstop=4
