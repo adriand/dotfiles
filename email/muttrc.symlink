@@ -1,6 +1,4 @@
 # yo
-source ~/.mutt/mailboxes
-
 mailboxes +me-devlinzed.com/Inbox
 
 # reading
@@ -92,8 +90,8 @@ macro index,pager "#" "<save-message>=me-devlinzed.com/Archive<enter>y<sync-mail
 macro index,pager 1 "<change-folder>=me-devlinzed.com/Inbox<enter>" "show inbox"
 macro index,pager 2 "<change-folder>=me-devlinzed.com/Todo<enter>" "show todo"
 macro index,pager 3 "<change-folder>=me-devlinzed.com/Archive<enter>" "show archive"
-macro index,pager t "<change-folder>=me-devlinzed.com/Trash<enter>" "show trash"
 macro index,pager s "<change-folder>=me-devlinzed.com/Sent<enter>" "show sent"
+macro index,pager t "<change-folder>=me-devlinzed.com/Trash<enter>" "show trash"
 
 macro index L "<enter-command>unset wait_key<enter><shell-escape>read -p 'notmuch query: ' x; echo \$x >~/.cache/mutt_terms<enter><limit>~i \"\`notmuch search --output=messages \$(cat ~/.cache/mutt_terms) | head -n 600 | perl -le '@a=<>;chomp@a;s/\^id:// for@a;$,=\"|\";print@a'\`\"<enter>" "show only messages matching a notmuch pattern"
 macro index a "<limit>all\n" "show all messages (undo limit)"
