@@ -8,7 +8,7 @@ build() {
   echo "$DOTFILES" | tee "$HOME/.projects"
 
   find "$CODE_ROOT" -type d -name '.git' | while read repository; do
-    dirname "$repository" | ag -v "/\." | tee -a "$HOME/.projects"
+    dirname "$repository" | grep -v "/\." | tee -a "$HOME/.projects"
   done
 }
 
@@ -16,13 +16,13 @@ guess() {
   projects=$(list | xargs -n 1 basename)
   match=$(echo "$projects" | matcher "$1" --limit 1)
 
-  list | ag "$match$"
+  list | grep "$match$"
 }
 
 new() {
   cd "$CODE_ROOT"
 
-  if echo "$1" | ag "\.git$" &> /dev/null; then
+  if echo "$1" | grep "\.git$" &> /dev/null; then
     git clone "$1" > /dev/null
   else
     git init "$1" > /dev/null
