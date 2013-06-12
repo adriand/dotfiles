@@ -1,8 +1,11 @@
-nilved does dotfiles
-====================
+devlin zed's dotfiles
+=====================
+
+i use ubuntu with a hint of mac os x.  this repository contains my user-level
+configuration files.
 
 install
--------
+=======
 
 ```sh
 git clone https://github.com/devlinzed/dotfiles ~/.dotfiles
@@ -27,14 +30,12 @@ some files that hard-code that path in because they can't accept environment
 variables.  try `git grep dotfiles | grep -v '^README\.md'`.
 
 what i use
-----------
+==========
 
 this is a very opinionated repository and it configures and utilizes the
-following programs.  these should be installed before you run the bootstrap
-script.
+following programs.
 
 * **color scheme**: [base16](https://github.com/chriskempson/base16)
-* **display manager**: [slim](http://slim.berlios.de/)
 * **email**: [mutt](http://mutt.org/)
 * **feed reader**: [newsbeuter](http://newsbeuter.org/)
 * **font**: [dejavu sans mono for powerline](https://github.com/Lokaltog/powerline-fonts)
@@ -47,9 +48,13 @@ script.
 * **web browser**: [luakit](http://luakit.org)
 * **window manager**: [awesome](http://awesome.naquadah.org/)
 
-### recommended & required tools
 
-it's recommended that these secondary tools be installed beforehand as well.
+
+recommended & required tools
+============================
+
+some programs or scripts rely on secondary programs.  to properly use
+everything in this repository, you'll need to install these as well.
 
 * [beets](http://beets.radbox.org) for managing my music library
 * [exuberant ctags](http://ctags.sourceforge.net/) for indexing my code
@@ -58,7 +63,7 @@ it's recommended that these secondary tools be installed beforehand as well.
 * [isync](http://isync.sourceforge.net/) for receiving email
 * [keychain](http://www.funtoo.org/wiki/Keychain) for managing your ssh and gpg
   agents & passphrases
-* [matcher](https://github.com/burke/matcher) for fuzzy finding paths
+* [matcher](https://github.com/burke/matcher) for approximate string matching
 * [mpd](http://mpd.wikia.com/wiki/Music_Player_Daemon_Wiki) for serving music
   to ncmpcpp
 * [msmpt](http://msmtp.sourceforge.net) for sending email
@@ -69,7 +74,7 @@ it's recommended that these secondary tools be installed beforehand as well.
   for printing
 
 folder structure
-----------------
+================
 
 - **bin/**: anything in `bin/` will get added to your `$PATH` and be made
   available everywhere
