@@ -15,12 +15,12 @@ cd ~/.dotfiles
 
 this will:
 
-1. check out the git submodules (vim, zsh, luakit plugins)
+1. check out the git submodules and update them if you've checked out a branch
 2. create symlinks (see "folder structure" below)
 3. install the required system-wide ruby gems
 4. install the proper font for powerline
 5. update luakit's adblock subscriptions
-6. compile anything we set up beforehand
+6. compile anything that needs compiling
 
 the bootstrap script is idempotent and you can run it again to update symlinks
 and vim plugins.  you may need to run it as root.
@@ -47,8 +47,6 @@ following programs.
 * **text editor**: [vim](http://vim.org)
 * **web browser**: [luakit](http://luakit.org)
 * **window manager**: [awesome](http://awesome.naquadah.org/)
-
-
 
 recommended & required tools
 ============================

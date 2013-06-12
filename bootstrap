@@ -13,9 +13,7 @@ DOTFILES="$PWD"
 
     branch="$(git branch | grep "^\*" | awk "{ print \$2 }")"
 
-    if [[ "$branch" == "(no" ]]; then
-      echo "$submodule is not on a branch, so bootstrap couldn't update it." >&2
-    else
+    if [[ "${branch:0:1}" != "(" ]]; then
       git pull origin "$branch"
     fi
   done
