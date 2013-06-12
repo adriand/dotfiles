@@ -68,7 +68,6 @@ it's recommended that these secondary tools be installed beforehand as well.
 * [wkhtmltopdf](http://code.google.com/p/wkhtmltopdf/) for rendering markdown
   for printing
 
-
 folder structure
 ----------------
 
@@ -84,7 +83,6 @@ folder structure
 
 - **topic/\*.completion.zsh**: any files ending in `completion.zsh` get loaded
   last so that they get loaded after we set up zsh autocomplete functions
-
 
 license
 -------

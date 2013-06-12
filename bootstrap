@@ -1,11 +1,24 @@
 #!/usr/bin/env bash
 set -e
+
 DOTFILES="$PWD"
 
 # check out git submodules
 
   git submodule init
   git submodule update --recursive
+
+  git submodule | awk "{ print \$2 }" | while read submodule; do
+    cd "$DOTFILES/$submodule"
+
+    branch="$(git branch | grep "^\*" | awk "{ print \$2 }")"
+
+    if [[ "$branch" == "(no" ]]; then
+      echo "$submodule is not on a branch, so bootstrap couldn't update it." >&2
+    else
+      git pull origin "$branch"
+    fi
+  done
 
 # set up symlinks
 
@@ -40,9 +53,9 @@ DOTFILES="$PWD"
     cat ruby/gems | while read gem; do
       grep "$gem" &> /dev/null <<< $gems && continue
 
-      echo "Installing Ruby gem: $gem"
+      echo "Installing $gem..."
 
-      if ! gem install $gem &> /dev/null; then
+      if ! gem install $gem; then
         echo "Failed.  Try running with sudo, or debug with \`gem install $gem\`." >&2
         echo "Skipping gem installation." >&2
         
