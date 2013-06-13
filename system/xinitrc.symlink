@@ -35,6 +35,7 @@ function process_running {
 process_running 'dropbox' || $HOME/.dropbox-dist/dropbox &
 process_running 'mpd' || mpd
 process_running 'pulseaudio' || start-pulseaudio-x11
+process_running 'urxvtd' || urxvtd -q -o -f
 process_running 'xscreensaver' || xscreensaver -no-splash  &
 
 eval `keychain --eval --clear ~/.ssh/id_rsa CF7781EF`
