@@ -12,15 +12,7 @@ set -e
     exit 3
   fi
 
-# make sure the dependencies are installed
-
-  if ! command -v matcher &> /dev/null; then
-    echo "You need to install burke/matcher." 1>&2
-
-    exit 2
-  fi
-
-# discern a list of possibilities and use matcher to guess
+# discern a list of possibilities and use fuzzyfind to guess
 
   guess=$(echo $password_store/**/*.gpg |
     tr " " "\n" | 

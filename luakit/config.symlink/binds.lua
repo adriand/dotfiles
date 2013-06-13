@@ -67,7 +67,7 @@ add_binds("all", {
 
     -- Open link in new tab or navigate to selection
     but({}, 2, [[Open link under mouse cursor in new tab or navigate to the
-        contents of `luakit.selection.clipboard`.]],
+        contents of `luakit.selection.primary`.]],
         function (w, m)
             -- Ignore button 2 clicks in form fields
             if not m.context.editable then
@@ -76,7 +76,7 @@ add_binds("all", {
                 if uri then
                     w:new_tab(uri, false)
                 else -- Open selection in current tab
-                    uri = luakit.selection.clipboard
+                    uri = luakit.selection.primary
                     -- Ignore multi-line selection contents
                     if uri and not string.match(uri, "\n.+") then
                         w:navigate(w:search_open(uri))
@@ -275,7 +275,7 @@ add_binds("normal", {
     key({}, "p", [[Open a URL based on the current primary selection contents
         in the current tab.]],
         function (w)
-            local uri = luakit.selection.clipboard
+            local uri = luakit.selection.primary
             if not uri then w:notify("No primary selection...") return end
             w:navigate(w:search_open(uri))
         end),
@@ -283,7 +283,7 @@ add_binds("normal", {
     key({}, "P", [[Open a URL based on the current primary selection contents
         in `[count=1]` new tab(s).]],
         function (w, m)
-            local uri = luakit.selection.clipoard
+            local uri = luakit.selection.primary
             if not uri then w:notify("No primary selection...") return end
             for i = 1, m.count do w:new_tab(w:search_open(uri)) end
         end, {count = 1}),
@@ -292,7 +292,7 @@ add_binds("normal", {
     key({}, "y", "Yank current URI to primary selection.",
         function (w)
             local uri = string.gsub(w.view.uri or "", " ", "%%20")
-            luakit.selection.clipboard = uri
+            luakit.selection.primary = uri
             w:notify("Yanked uri: " .. uri)
         end),
 
