@@ -35,6 +35,7 @@ set omnifunc=syntaxcomplete#Complete
 set pumheight=5
 set report=0
 set ruler
+set shell=zsh
 set shiftround
 set shiftwidth=2
 set shortmess=filtIoOA
@@ -48,6 +49,8 @@ set textwidth=79
 set timeoutlen=200
 set undodir=~/.vim/tmp/undo//
 set undofile
+set undolevels=128
+set undoreload=1024
 set visualbell
 set whichwrap+=<,>,h,l,[,]
 set wildmenu

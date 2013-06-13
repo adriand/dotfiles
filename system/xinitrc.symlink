@@ -23,6 +23,12 @@ if [ -f "$HOME/.gtkrc" ]; then
   export GTK2_RC_FILES="$HOME/.gtkrc"
 fi
 
+if [ -d "$HOME/.fonts" ]; then
+  xset +fp "$HOME/.fonts"
+  xset fp rehash
+  fc-cache
+fi
+
 processes=$(ps -u $USERNAME | awk '{ print $4 }')
 function process_running {
   if echo "$processes" | grep "^$1$" &> /dev/null; then

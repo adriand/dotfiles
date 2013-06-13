@@ -43,7 +43,7 @@ following programs.
 * **operating system**: [ubuntu](http://ubuntu.com)
 * **password manager**: [pass](http://zx2c4.com/projects/password-store/)
 * **shell**: [zsh](http://zsh.org/)
-* **terminal emulator**: [rxvt-unicode](https://en.wikipedia.org/wiki/Rxvt)
+* **terminal emulator**: [rxvt-unicode-256color](https://en.wikipedia.org/wiki/Rxvt)
 * **text editor**: [vim](http://vim.org)
 * **web browser**: [luakit](http://luakit.org)
 * **window manager**: [awesome](http://awesome.naquadah.org/)
