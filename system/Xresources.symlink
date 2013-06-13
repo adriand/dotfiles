@@ -8,7 +8,7 @@
 *.color1:       #ac4142
 *.color2:       #90a959
 *.color3:       #d28445
-*.color4:       #6a9fg5
+*.color4:       #6a9fb5
 *.color5:       #aa759f
 *.color6:       #75b5aa
 *.color7:       #d0d0d0
@@ -23,4 +23,9 @@
 
 Xcursor.theme: DMZ-White
 
-XTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+URxvt.font: xft:cure:style=Regular
+URxvt.boldFont: xft:cure:style=Regular
+URxvt.matcher.button: 1
+URxvt.perl-ext.common: default,matcher,tabbed
+URxvt.scrollBar: false
+URxvt.url-launcher: /usr/bin/sensible-browser

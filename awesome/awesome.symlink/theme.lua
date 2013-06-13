@@ -4,7 +4,7 @@
 
 theme = {}
 
-theme.font          = "DejaVu Sans Mono for Powerline 8"
+theme.font          = "cure 10"
 
 theme.bg_normal     = "#202020"
 theme.bg_focus      = "#8f5535"

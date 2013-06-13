@@ -39,7 +39,7 @@ end
 beautiful.init(awful.util.getdir('config') .. "/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "xterm -fa 'DejaVu Sans Mono' -fs 9"
+terminal = "urxvt"
 
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
@@ -78,10 +78,10 @@ end
 
 -- Create a textclock widget
 mytextclock = widget({ type = "textbox" })
-vicious.register(mytextclock, vicious.widgets.date, "%A, %B %d, %Y at %I:%M:%S %p  ", 1)
+vicious.register(mytextclock, vicious.widgets.date, "%Y %m %d @ %I %M %S  ", 1)
 
 -- Create a systray
-mysystray = widget({ type = "systray" })
+-- mysystray = widget({ type = "systray" })
 
 -- Create a wibox for each screen and add it
 mytopwibox = {}
@@ -159,7 +159,7 @@ for s = 1, screen.count() do
    end, mytasklist.buttons)
 
   -- Create the top wibox
-  mytopwibox[s] = awful.wibox({ position = "top", screen = s, height = "18" })
+  mytopwibox[s] = awful.wibox({ position = "top", screen = s, height = "16" })
 
   -- Add widgets to the wibox - order matters
   mytopwibox[s].widgets = {
@@ -169,13 +169,13 @@ for s = 1, screen.count() do
       mypromptbox[s],
       layout = awful.widget.layout.horizontal.leftright
     },
-    mysystray,
+    -- mysystray,
     mytextclock,
     layout = awful.widget.layout.horizontal.rightleft
   }
 
   -- Create the bottom wibox
-  mybottomwibox[s] = awful.wibox({ position = "bottom", screen = s, height = "18" })
+  mybottomwibox[s] = awful.wibox({ position = "bottom", screen = s, height = "16" })
 
   mybottomwibox[s].widgets = {
     mytasklist[s],
