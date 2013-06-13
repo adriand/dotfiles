@@ -1,5 +1,0 @@
-#!/usr/bin/env zsh
-timestamp=$(date +%Y%m%d%H%M%S)
-target="$HOME/Pictures/Screenshots"
-
-scrot --quality 0 $* "$target/$timestamp.png"
