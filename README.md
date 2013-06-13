@@ -25,9 +25,7 @@ this will:
 the bootstrap script is idempotent and you can run it again to update symlinks
 and vim plugins.  you may need to run it as root.
 
-if you check out to somewhere other than `~/.dotfiles`, you'll need to edit
-some files that hard-code that path in because they can't accept environment
-variables.  try `git grep dotfiles | grep -v '^README\.md'`.
+do a `git grep` for `/home/devlin` and `.dotfiles` and replace those, too!
 
 what i use
 ==========
@@ -39,6 +37,7 @@ following programs.
 * **email**: [mutt](http://mutt.org/)
 * **feed reader**: [newsbeuter](http://newsbeuter.org/)
 * **font**: [cure](http://artwizaleczapka.sourceforge.net/)
+* **gtk theme**: [elegant brit](http://grvrulz.deviantart.com/art/Elegant-Brit-gnome3-208925032)
 * **music player**: [ncmpcpp](http://ncmpcpp.rybczak.net/)
 * **operating system**: [ubuntu](http://ubuntu.com)
 * **password manager**: [pass](http://zx2c4.com/projects/password-store/)

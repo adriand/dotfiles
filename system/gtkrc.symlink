@@ -1,12 +1,12 @@
-include "~/.themes/naos/gtk-2.0/gtkrc"
+include "/home/devlin/.themes/elegant_brit/gtk-2.0/gtkrc"
 
-gtk-font-name        =  "DejaVu Sans 8"
+gtk-font-name        =  "cure 10"
 gtk-icon-theme-name  =  "Faenza-Dark"
 gtk-theme-name       =  "naos"
 gtk-toolbar-style    =  GTK_TOOLBAR_ICONS
 
 style "thing" {
-  font_name = "DejaVu Sans 8"
+  font_name = "cure 10"
 }
 
 widget_class "*" style "thing"
