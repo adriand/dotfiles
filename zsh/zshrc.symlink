@@ -1,5 +1,7 @@
 # load keychain for remote access
-command -v keychain &> /dev/null && eval $(keychain --noask --eval)
+if [[ -n "$SSH_CLIENT" ]] && command -v keychain &> /dev/null; then
+  eval $(keychain --noask --eval)
+fi
 
 # shortcut to this dotfiles path is $DOTFILES
 [[ -z "$DOTFILES" ]] && export DOTFILES=$HOME/.dotfiles
