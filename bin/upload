@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+
+for file in $*; do
+  rsync -rve ssh --progress "$1" roughsleeper:"\"/srv/www/nilved.me/public/$file\""
+done
