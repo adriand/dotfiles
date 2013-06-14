@@ -14,8 +14,8 @@ set -e
 
 # discern a list of possibilities and use fuzzyfind to guess
 
-  guess=$(echo $password_store/**/*.gpg |
-    tr " " "\n" | 
+  guess=$(find "$password_store" -name '*gpg' -print0 |
+    tr "\0" "\n" | 
     sed "s#$password_store/##" |
     sed 's#\.gpg$##' |
     fuzzyfind "$1")
