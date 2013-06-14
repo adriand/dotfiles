@@ -1,3 +1,6 @@
+# load keychain for remote access
+command -v keychain &> /dev/null && eval $(keychain --noask --eval)
+
 # shortcut to this dotfiles path is $DOTFILES
 [[ -z "$DOTFILES" ]] && export DOTFILES=$HOME/.dotfiles
 
