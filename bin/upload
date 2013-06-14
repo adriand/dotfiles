@@ -1,5 +1,14 @@
 #!/usr/bin/env zsh
-
+#
 for file in $*; do
-  rsync -rve ssh --progress "$1" roughsleeper:"\"/srv/www/nilved.me/public/$file\""
+  extension="$(extname "$file")"
+  digest="$(cat "$file" | md5sum)"
+
+  if [[ -n "$extension" ]]; then
+    suffix=".$extension"
+  fi
+
+  rsync -rve ssh --progress "$1" roughsleeper:"\"/srv/www/nilved.me/public/${digest:0:3}$suffix\""
+
+  echo "http://nilved.me/${digest:0:3}$suffix"
 done
