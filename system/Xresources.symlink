@@ -1,10 +1,11 @@
-! Base16 Default
-! Scheme: Chris Kempson (http://chriskempson.com)
-
-*.foreground:   #d0d0d0
 *.background:   #151515
-*.cursorColor:  #d0d0d0
 *.color0:       #151515
+*.color10:      #202020
+*.color11:      #303030
+*.color12:      #b0b0b0
+*.color13:      #e0e0e0
+*.color14:      #8f5536
+*.color15:      #f5f5f5
 *.color1:       #ac4142
 *.color2:       #90a959
 *.color3:       #d28445
@@ -14,18 +15,12 @@
 *.color7:       #d0d0d0
 *.color8:       #505050
 *.color9:       #d28445
-*.color10:      #202020
-*.color11:      #303030
-*.color12:      #b0b0b0
-*.color13:      #e0e0e0
-*.color14:      #8f5536
-*.color15:      #f5f5f5
-
-Xcursor.theme: DMZ-White
-
-URxvt.font: xft:cure:style=Regular
+*.cursorColor:  #d0d0d0
+*.foreground:   #d0d0d0
 URxvt.boldFont: xft:cure:style=Regular
+URxvt.font: xft:cure:style=Regular
 URxvt.matcher.button: 1
 URxvt.perl-ext.common: default,matcher,tabbed
 URxvt.scrollBar: false
 URxvt.url-launcher: /usr/bin/sensible-browser
+Xcursor.theme: DMZ-White
