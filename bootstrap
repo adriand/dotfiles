@@ -20,7 +20,8 @@ DOTFILES="$PWD"
 
 # set up symlinks
 
-  for symlink in **/*.symlink; do
+  find "." -name "*.symlink" | egrep -v "\.git|tmp/undo" | while read symlink; do
+    symlink="${symlink##./}"
     linkable="$PWD/$symlink"
     basename=$(basename "$linkable" | sed 's/\.symlink$//')
 
@@ -30,8 +31,8 @@ DOTFILES="$PWD"
       target="$HOME/.$basename"
     fi
 
-    if [[ -f "$target" || -d "$target" ]]; then
-      if [[ $(readlink "$target") == "$linkable" ]]; then
+    if [[ -e "$target" ]] || [[ -L "$target" ]]; then
+      if [[ "$(readlink "$target")" == "$linkable" ]]; then
         continue
       else
         mv -v "$target" "$target.bak"
