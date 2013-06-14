@@ -4,15 +4,21 @@ if command -v xsel &> /dev/null && ! command -v pbcopy &>/dev/null; then
 fi
 
 for scr in rails rspec cap; do
-  alias "$scr"="nocorrect $scr";
+  if command -v "$scr" &> /dev/null; then
+    alias "$scr"="nocorrect $scr";
+  fi
 done
 
 for scr in rake; do
-  alias "$scr"="noglob $scr";
+  if command -v "$scr" &> /dev/null; then
+    alias "$scr"="noglob $scr";
+  fi
 done
 
-for scr in git vim workon; do
-  alias "${scr:0:1}"="$scr"
+for scr in git vim workon xdg-open; do
+  if command -v "$scr" &> /dev/null; then
+    alias "${scr:0:1}"="$scr"
+  fi
 done
 
 if command -v hub &> /dev/null; then
