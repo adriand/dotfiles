@@ -231,9 +231,7 @@ globalkeys = awful.util.table.join(
     end
   end),
 
-  awful.key({ }, "Print", function() awful.util.spawn("capscr") end),
-
-  awful.key({ "Alt" }, "Print", function() awful.util.spawn("capscr --focused") end),
+  awful.key({ }, "Print", function() awful.util.spawn("scrot") end),
 
   awful.key({ modkey, "Shift" }, "j", function() awful.client.swap.byidx(  1) end),
 
