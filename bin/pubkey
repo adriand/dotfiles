@@ -1,2 +1,2 @@
 #!/bin/sh
-cat ~/.ssh/${1:-id_rsa}.pub
+cat ~/.ssh/id_${1:-ecdsa}.pub
