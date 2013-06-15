@@ -58,7 +58,6 @@ everything in this repository, you'll need to install these as well.
 * [beets](http://beets.radbox.org) for managing my music library
 * [exuberant ctags](http://ctags.sourceforge.net/) for indexing my code
 * [git](http://git-scm.org) for version control
-* [hub](https://github.com/defunkt/hub) for extending git
 * [isync](http://isync.sourceforge.net/) for receiving email
 * [keychain](http://www.funtoo.org/wiki/Keychain) for managing your ssh and gpg
   agents & passphrases
