@@ -1,8 +1,7 @@
 devlin zed's dotfiles
 =====================
 
-i use ubuntu with a hint of mac os x.  this repository contains my user-level
-configuration files.
+i use arch linux.  this repository contains my user-level configuration files.
 
 ![screenshpt](screenshot.png)
 
