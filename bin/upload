@@ -8,7 +8,7 @@ for file in $*; do
     suffix=".$extension"
   fi
 
-  rsync -rve ssh --progress "$1" roughsleeper:"\"/srv/www/nilved.me/public/${digest:0:3}$suffix\""
+  rsync -rve ssh --progress "$1" roughsleeper:"\"/srv/www/nilved.me/public/${digest:0:3}$suffix\"" >&2
 
   echo "http://nilved.me/${digest:0:3}$suffix"
 done
