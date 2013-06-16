@@ -8,7 +8,7 @@ fi
 
 # this should probably be less hardcodey
 if [[ $(uname) == "Linux" ]]; then
-  export CODE_ROOT=$HOME/Projects/Code
+  export CODE_ROOT=$HOME/projects/code
 elif [[ $(uname) == "Darwin" ]]; then
   export CODE_ROOT=$HOME/Code
 fi
