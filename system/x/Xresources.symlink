@@ -24,3 +24,4 @@ URxvt.perl-ext.common: default,matcher,tabbed
 URxvt.scrollBar: false
 URxvt.url-launcher: /usr/bin/sensible-browser
 Xcursor.theme: DMZ-White
+Xft.dpi: 96
