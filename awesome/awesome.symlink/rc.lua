@@ -201,6 +201,19 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
+  awful.key({ }, "XF86AudioRaiseVolume", function() awful.util.spawn("amixer set Master 9%+", false)
+  end),
+
+  awful.key({ }, "XF86AudioLowerVolume", function() awful.util.spawn("amixer set Master 9%-", false) end),
+
+  awful.key({ }, "XF86AudioMute", function() awful.util.spawn("amixer sset Master toggle", false) end),
+
+  awful.key({ }, "XF86AudioPlay", function() awful.util.spawn("ncmpcpp toggle", false) end),
+
+  awful.key({ }, "XF86AudioNext", function() awful.util.spawn("ncmpcpp next", false) end),
+
+  awful.key({ }, "XF86AudioStop", function() awful.util.spawn("ncmpcpp stop", false) end),
+
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
 
