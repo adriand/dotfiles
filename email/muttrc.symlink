@@ -20,7 +20,7 @@ set text_flowed
 set thorough_search
 set tilde
 set timeout = 3
-set trash = +me-devlinzed.com/Trash
+# set trash = +me-devlinzed.com/Trash
 
 unset markers
 

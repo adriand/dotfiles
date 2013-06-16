@@ -41,7 +41,7 @@ following programs.
 * **font**: [cure](http://artwizaleczapka.sourceforge.net/)
 * **gtk theme**: [elegant brit](http://grvrulz.deviantart.com/art/Elegant-Brit-gnome3-208925032)
 * **music player**: [ncmpcpp](http://ncmpcpp.rybczak.net/)
-* **operating system**: [ubuntu](http://ubuntu.com)
+* **operating system**: [arch linux](http://archlinux.org)
 * **password manager**: [pass](http://zx2c4.com/projects/password-store/)
 * **shell**: [zsh](http://zsh.org/)
 * **terminal emulator**: [rxvt-unicode-256color](https://en.wikipedia.org/wiki/Rxvt)
