@@ -29,21 +29,10 @@ if [ -d "$HOME/.fonts" ]; then
   fc-cache
 fi
 
-processes=$(ps -u $USERNAME | awk '{ print $4 }')
-function process_running {
-  if echo "$processes" | grep "^$1$" &> /dev/null; then
-    return 0
-  else
-    return 1
-  fi
-}
+mpd
+urxvtd -q -o -f
+xscreensaver -no-splash &
 
-process_running 'dropbox' || $HOME/.dropbox-dist/dropbox &
-process_running 'mpd' || mpd
-process_running 'pulseaudio' || start-pulseaudio-x11
-process_running 'urxvtd' || urxvtd -q -o -f
-process_running 'xscreensaver' || xscreensaver -no-splash  &
-
-eval `keychain --eval --clear ~/.ssh/id_rsa CF7781EF`
+eval `keychain --eval --clear`
 
 exec dbus-launch --exit-with-session awesome
