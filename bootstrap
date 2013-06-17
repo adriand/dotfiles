@@ -8,16 +8,6 @@ DOTFILES="$PWD"
   git submodule init
   git submodule update --recursive
 
-  git submodule | awk "{ print \$2 }" | while read submodule; do
-    cd "$DOTFILES/$submodule"
-
-    branch="$(git branch | grep "^\*" | awk "{ print \$2 }")"
-
-    if [[ "${branch:0:1}" != "(" ]]; then
-      git pull origin "$branch"
-    fi
-  done
-
 # set up symlinks
 
   find "." -name "*.symlink" | egrep -v "\.git|tmp/undo" | while read symlink; do
