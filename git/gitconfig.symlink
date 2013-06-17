@@ -19,9 +19,6 @@
   editor = vim
   excludesfile = ~/.gitignore
 
-[diff]
-  algorithm = histogram
-
 [format]
   pretty = "%C(blue)%h%Creset %s %C(black)%cr by %an"
 

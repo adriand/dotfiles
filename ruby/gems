@@ -1,6 +1,7 @@
 gem-ctags
 
 bundler
+fuzzy_match
 gem-browse
 mail
 pdfkit
