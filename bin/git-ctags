@@ -1,4 +1,5 @@
 #!/bin/sh
+PATH="/usr/local/bin:/usr/bin:/bin" # prioritize exuberant ctags
 set -e
 trap "rm -f .git/tags.$$" EXIT
 git ls-files | ctags --tag-relative -L - -f .git/tags.$$
