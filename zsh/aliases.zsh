@@ -1,17 +1,4 @@
-if command -v xsel &> /dev/null && ! command -v pbcopy &>/dev/null; then
-  alias "pbcopy"='xsel -ib'
-  alias "pbpaste"='xsel -o'
-fi
-
-for scr in rails rspec cap; do
-  alias "$scr"="nocorrect $scr";
-done
-
-for scr in rake; do
-  alias "$scr"="noglob $scr";
-done
-
-for scr in git vim workon xdg-open; do
+for scr in git vim workon; do
   alias "${scr:0:1}"="$scr"
 done
 
