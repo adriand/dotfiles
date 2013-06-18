@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+git remote | while read remote; do
+  git push "$remote" $*
+done
