@@ -19,9 +19,8 @@
 *.foreground:   #d0d0d0
 URxvt.boldFont: xft:cure:style=Regular
 URxvt.font: xft:cure:style=Regular
-URxvt.matcher.button: 1
-URxvt.perl-ext.common: default,matcher,tabbed
+URxvt.perl-ext.common:
+URxvt.perl-ext:
 URxvt.scrollBar: false
-URxvt.url-launcher: /usr/bin/sensible-browser
 Xcursor.theme: DMZ-White
 Xft.dpi: 96

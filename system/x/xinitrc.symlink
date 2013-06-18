@@ -31,7 +31,6 @@ fi
 
 dropboxd &
 mpd
-urxvtd -q -o -f
 xscreensaver -no-splash &
 
 eval `keychain --eval --clear`
