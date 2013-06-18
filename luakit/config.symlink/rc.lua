@@ -100,7 +100,7 @@ require "bookmarks_chrome"
 require "downloads"
 require "downloads_chrome"
 
-downloads.default_dir = os.getenv("HOME") .. "/Downloads"
+downloads.default_dir = "/media/downloads"
 
 -- Example using xdg-open for opening downloads / showing download folders
 --downloads.add_signal("open-file", function (file, mime)
