@@ -7,8 +7,8 @@ theme = {}
 theme.font          = "cure 10"
 
 theme.bg_normal     = "#202020"
-theme.bg_focus      = "#303030"
-theme.bg_urgent     = "#acf412"
+theme.bg_focus      = "#D28445"
+theme.bg_urgent     = "#AC4142"
 theme.bg_minimize   = "#151515"
 theme.bg_systray    = theme.bg_normal
 
@@ -18,8 +18,8 @@ theme.fg_urgent     = "#f5f5f5"
 theme.fg_minimize   = "#d0d0d0"
 
 theme.border_width  = 1
-theme.border_normal = "#!51515"
-theme.border_focus  = "#f48f7S"
+theme.border_normal = "#202020"
+theme.border_focus  = "#D28445"
 theme.border_marked = "#91231c"
 
 -- There are other variable sets
