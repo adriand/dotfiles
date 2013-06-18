@@ -1,6 +1,6 @@
 [alias]
   amend = commit --amend --reuse-message HEAD
-  assume = update-index --assume-untracked
+  assume = update-index --assume-unchanged
   assumed = !git ls-files -v | grep ^h | cut -c 3-
   forget = reset HEAD
   ls = ls-files
@@ -9,7 +9,7 @@
   revision = rev-parse HEAD
   sync = !git add . && git add -u
   tags = tag -l
-  unassume = update-index --no-assume-untracked
+  unassume = update-index --no-assume-unchanged
   undo = reset --hard HEAD
 
 [color]
