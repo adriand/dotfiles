@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 export DOTFILES="$HOME/.dotfiles"
-export PATH="./.bundle/binstubs:$DOTFILES/bin:$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
+export PATH="./.bundle/binstubs:$DOTFILES/bin:$HOME/.local/bin:/usr/local/bin:/usr/bin"
 
 if [ -d "/etc/X11/xinit/xinitrc.d" ]; then
   for node in /etc/X11/xinit/xinitrc.d/*; do
