@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# screen requires my TERM be short for some reason
+TERM="xterm"
+
+ssh -t nilved@beige.feralhosting.com "screen -r"
