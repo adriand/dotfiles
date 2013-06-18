@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+require "pathname"
+
+paths = ENV["PATH"].split(":").map(&Pathname.method(:new))
+
+ARGV.each do |arg|
+  paths.each do |path|
+    full_path = path.join(arg)
+
+    puts full_path if full_path.executable?
+  end
+end
