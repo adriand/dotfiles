@@ -1,6 +1,0 @@
-Host *
-  IdentityFile ~/.ssh/id_ecdsa
-
-Host github.com
-  IdentityFile ~/.ssh/id_rsa
-  User git
