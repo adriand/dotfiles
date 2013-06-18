@@ -29,9 +29,13 @@ if [ -d "$HOME/.fonts" ]; then
   fc-cache
 fi
 
-dropboxd &
-mpd
-xscreensaver -no-splash &
+pgrep dropbox -u $USER || dropboxd &
+pgrep mpd -u $USER || mpd
+pgrep xscreensaver -u $USER xscreensaver -no-splash &
+
+if ! mount &> /dev/null | grep "$HOME/watch"; then
+  sshfs nilved@beige.feralhosting.com:"\"private/rtorrent/watch"\" "$HOME/watch" &
+fi
 
 eval `keychain --eval --clear`
 
