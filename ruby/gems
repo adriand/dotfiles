@@ -4,6 +4,5 @@ bundler
 fuzzy_match
 gem-browse
 mail
-pdfkit
 redcarpet
 t

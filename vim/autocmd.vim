@@ -1,13 +1,3 @@
-" runners on <leader>r
-autocmd FileType coffee nmap <leader>r :call RunWith("coffee")<CR>
-autocmd FileType markdown nmap <leader>r :!epdfview $(md2pdf < %)<CR> 
-autocmd FileType ruby nmap <leader>r :call RunWith("ruby")<CR>
-autocmd FileType vim nmap <leader>r :source %<CR> 
-autocmd FileType javascript nmap <leader>r :call RunWith("node")<CR>
-
-" superficial runners on <leader>R
-autocmd BufRead *_spec.rb nmap <leader>R :call RunWith("rspec")<CR>
-
 " other type-specific junk
 autocmd BufRead /tmp/mutt-* setlocal syntax=markdown
 
