@@ -293,7 +293,14 @@ add_binds("normal", {
         function (w)
             local uri = string.gsub(w.view.uri or "", " ", "%%20")
             luakit.selection.primary = uri
-            w:notify("Yanked uri: " .. uri)
+            w:notify("Yanked uri to primary: " .. uri)
+        end),
+
+    key({}, "Y", "Yank current URI to clipboard.",
+        function (w)
+            local uri = string.gsub(w.view.uri or "", " ", "%%20")
+            luakit.selection.clipboard = uri
+            w:notify("Yanked uri to clipboard: " .. uri)
         end),
 
     -- Commands
