@@ -5,11 +5,15 @@ list() {
 }
 
 build() {
-  echo "$DOTFILES" | tee "$HOME/.projects"
+  trap "rm -f $HOME/.projects.$$" EXIT
+
+  echo "$DOTFILES" | tee "$HOME/.projects.$$"
 
   find "$CODE_ROOT" -type d -name '.git' | while read repository; do
-    dirname "$repository" | grep -v "/\." | tee -a "$HOME/.projects"
+    dirname "$repository" | grep -v "/\." | tee -a "$HOME/.projects.$$"
   done
+
+  mv "$HOME/.projects.$$" "$HOME/.projects"
 }
 
 guess() {
