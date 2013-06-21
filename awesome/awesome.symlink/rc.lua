@@ -91,7 +91,7 @@ end
 
 -- {{{ Wibox
 -- Create a textclock widget
-mytextclock = awful.widget.textclock()
+mytextclock = awful.widget.textclock("%Y-%m-%d @ %I:%M:%S ", 1)
 
 -- Create a wibox for each screen and add it
 mytopwibox = {}
@@ -210,9 +210,13 @@ globalkeys = awful.util.table.join(
 
   awful.key({ }, "XF86AudioPlay", function() awful.util.spawn("ncmpcpp toggle", false) end),
 
+  awful.key({ }, "XF86AudioPrev", function() awful.util.spawn("ncmpcpp prev", false) end),
+
   awful.key({ }, "XF86AudioNext", function() awful.util.spawn("ncmpcpp next", false) end),
 
   awful.key({ }, "XF86AudioStop", function() awful.util.spawn("ncmpcpp stop", false) end),
+
+  awful.key({ }, "Print", function() awful.util.spawn("scrot -e 'mv $f /media/pictures/screenshots/'") end),
 
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
