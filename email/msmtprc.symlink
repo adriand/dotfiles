@@ -7,7 +7,7 @@ account nilved
 auth on
 from me@devlinzed.com
 host smtp.lavabit.com
-passwordeval pass show main/lavabit | head -n 1
+passwordeval pass show lavabit | head -n 1
 port 587
 user nilvedxyz@lavabit.com
 
