@@ -1,4 +1,2 @@
 ---
-BUNDLE_PATH: .bundle
-BUNDLE_BIN: .bundle/binstubs
-BUNDLE_WITHOUT: production
+BUNDLE_PATH: vendor/ruby
