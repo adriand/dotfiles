@@ -1,4 +1,4 @@
-for scr in git vim workon; do
+for scr in git vim workon xdg-open; do
   alias "${scr:0:1}"="$scr"
 done
 
