@@ -3,7 +3,7 @@ devlin zed's dotfiles
 
 i use arch linux.  this repository contains my user-level configuration files.
 
-![screenshpt](screenshot.png)
+![screenshot](screenshot.png)
 
 install
 =======
@@ -35,11 +35,12 @@ this is a very opinionated repository and it configures and utilizes the
 following programs.
 
 * **color scheme**: [base16](https://github.com/chriskempson/base16)
-* **document viewer**: [zathura][http://pwmt.org/projects/zathura/]
+* **document viewer**: [zathura](http://pwmt.org/projects/zathura/)
 * **email**: [mutt](http://mutt.org/)
 * **feed reader**: [newsbeuter](http://newsbeuter.org/)
 * **font**: [cure](http://artwizaleczapka.sourceforge.net/)
-* **gtk theme**: [elegant brit](http://grvrulz.deviantart.com/art/Elegant-Brit-gnome3-208925032)
+* **gtk theme**: [elegant
+  brit](http://grvrulz.deviantart.com/art/Elegant-Brit-gnome3-208925032)
 * **image viewer**: [sxiv](https://github.com/muennich/sxiv)
 * **music player**: [ncmpcpp](http://ncmpcpp.rybczak.net/)
 * **operating system**: [arch linux](http://archlinux.org)
@@ -65,13 +66,16 @@ everything in this repository, you'll need to install these as well.
 * [exuberant ctags](http://ctags.sourceforge.net/) for indexing my code
 * [git](http://git-scm.org) for version control
 * [isync](http://isync.sourceforge.net/) for receiving email
-* [keychain](http://www.funtoo.org/wiki/Keychain) for managing your ssh and gpg agents & passphrases
+* [keychain](http://www.funtoo.org/wiki/Keychain) for managing your ssh and gpg
+  agents & passphrases
 * [matcher](https://github.com/burke/matcher) for approximate string matching
-* [mpd](http://mpd.wikia.com/wiki/Music_Player_Daemon_Wiki) for serving music to ncmpcpp
+* [mpd](http://mpd.wikia.com/wiki/Music_Player_Daemon_Wiki) for serving music
+  to ncmpcpp
 * [msmpt](http://msmtp.sourceforge.net) for sending email
 * [notmuch](http://notmuchmail.org/) for indexing and searching email
 * [packer](https://aur.archlinux.org/packages/packer/) for accessing the AUR
-* [the silver searcher](https://github.com/ggreer/the_silver_searcher) for replacing grep
+* [the silver searcher](https://github.com/ggreer/the_silver_searcher) for
+  replacing grep
 
 install all of these with:
 
