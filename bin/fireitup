@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -e
+
+sudo -v
+
+if (ls /dev/sdc1 && ! mount | grep "mapper/media") > /dev/null; then
+  pass show keys/media | sudo cryptsetup luksOpen /dev/sdc1 media
+  
+  mount /dev/mapper/media /media
+fi
+
+if (ls /dev/sdd1 && ! mount | grep "mapper/backups") > /dev/null; then
+  pass show keys/backups | sudo cryptsetup luksOpen /dev/sdd1 backups
+  
+  mount /dev/mapper/backups /media/backups
+fi
+
+if (ls /dev/sdb1 && ! mount | grep "mapper/recovery") > /dev/null; then
+  pass show keys/recovery | sudo cryptsetup luksOpen /dev/sdb1 recovery
+  
+  mount /dev/mapper/recovery /recovery
+fi
