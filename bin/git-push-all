@@ -1,5 +1,3 @@
 #!/usr/bin/env bash
 
-git remote | while read remote; do
-  git push "$remote" $*
-done
+git remote | xargs -P 4 -n 1 -J % git push % $*
