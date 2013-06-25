@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
-git remote | xargs -P 4 -n 1 -i git push {} $*
+if [[ "$(uname)" == "Linux" ]]; then
+  git remote | xargs -P 4 -n 1 -i git push {} $*
+else
+  git remote | xargs -P 4 -n 1 -J % git push % $*
+fi
