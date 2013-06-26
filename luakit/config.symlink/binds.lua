@@ -146,6 +146,15 @@ add_binds("normal", {
             end
             return false
         end),
+    
+    key({}, "v", function (w) 
+        local view = w.view
+        local uri = view.hovered_uri or view.uri
+        if uri then
+            luakit.spawn(string.format("urxvt -e cclive -f best --filename-format '%%t.%%s' "
+                .. "--output-dir %q --exec='vlc \"%%f\"' %q", os.getenv("HOME"), uri))
+        end 
+    end),
 
     key({}, "✓", "Enter `insert` mode.",
         function (w) w:set_mode("insert")  end),
