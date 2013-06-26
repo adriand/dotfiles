@@ -9,8 +9,8 @@ build() {
 
   echo "$DOTFILES" | tee "$HOME/.projects.$$"
 
-  find "$CODE_ROOT" -type d -name '.git' | while read repository; do
-    dirname "$repository" | grep -v "/\." | tee -a "$HOME/.projects.$$"
+  find "$CODE_ROOT" -maxdepth 2 -mindepth 1 -type d -name '.git' | while read repository; do
+    dirname "$repository" | tee -a "$HOME/.projects.$$"
   done
 
   mv "$HOME/.projects.$$" "$HOME/.projects"
