@@ -1,7 +1,9 @@
 #!/usr/bin/env zsh
 
 for file in $*; do
-  rsync -rve ssh --progress "$1" roughsleeper:"\"/srv/www/nilved.me/public/$file\"" >&2
+  basename="$(basename "$file")"
 
-  echo "http://nilved.me/$file"
+  rsync -rve ssh --progress "$1" roughsleeper:"\"/srv/www/nilved.me/public/$basename\"" >&2
+
+  echo "http://nilved.me/$basename"
 done
