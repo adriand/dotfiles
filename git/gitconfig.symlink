@@ -8,6 +8,7 @@
   remotes = remote -v
   revision = rev-parse HEAD
   sync = !git add . && git add -u
+  tug = !git pull $* && git push $*
   unassume = update-index --no-assume-unchanged
   undo = reset --hard HEAD
 
