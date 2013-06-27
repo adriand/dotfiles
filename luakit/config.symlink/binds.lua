@@ -152,7 +152,7 @@ add_binds("normal", {
         local uri = view.hovered_uri or view.uri
         if uri then
             luakit.spawn(string.format("urxvt -e cclive -f best --filename-format '%%t.%%s' "
-                .. "--output-dir %q --exec='vlc \"%%f\"' %q", os.getenv("HOME"), uri))
+                .. "--output-dir %q --exec='mplayer \"%%f\"' %q", os.getenv("HOME"), uri))
         end 
     end),
 
