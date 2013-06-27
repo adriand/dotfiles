@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 require "fuzzy_match"
 
-puts FuzzyMatch.new(STDIN.read.split).find(ARGV.first)
+puts FuzzyMatch.new(STDIN.readlines).find(ARGV.first)
