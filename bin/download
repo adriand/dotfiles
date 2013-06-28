@@ -3,7 +3,7 @@
 # configuration
 
   HOST="nilved@beige.feralhosting.com"
-  LOCATION="private/rtorrent/data"
+  LOCATION="private/deluge/complete"
 
 # guess using matcher if we supply -g or --guess
 # this depends on having github.com/burke/matcher on your PATH
