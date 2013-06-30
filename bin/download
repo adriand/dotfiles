@@ -25,4 +25,4 @@
 
 # rsync that shit
 
-  rsync -rve ssh --progress $HOST:"\"$LOCATION/$name\"" .
+  rsync -rve ssh --progress --partial $HOST:"\"$LOCATION/$name\"" .
